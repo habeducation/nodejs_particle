@@ -1,8 +1,17 @@
 var express = require('express');
 var app = express();
 
-app.get('/', function (req, res) {
+app.post('/', function (req, res) {
+  console.log('Received request');
+  console.log(req);
   res.send('Hello World!');
+});
+
+
+app.get('/', function (req, res) {
+  console.log('received request');
+  console.log(req);
+  res.send('Hello world!');
 });
 
 app.listen(3000, function () {
