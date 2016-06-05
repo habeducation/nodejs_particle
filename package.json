@@ -4,7 +4,8 @@
   "description": "server that logs requests from particle.io for HAB",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "pg": "^4.5.6"
   },
   "devDependencies": {},
   "scripts": {
