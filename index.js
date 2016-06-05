@@ -10,7 +10,7 @@ var con = process.env.CON_STRING;
 var app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
-var arr=[];
+var arr = JSON.parse(require('fs').readFileSync('out.json'));
 
 app.post('/', function (req, res) {
   console.log('Received push request');
@@ -18,7 +18,6 @@ app.post('/', function (req, res) {
   var fs = require('fs');
   fs.writeFile('out.json', JSON.stringify(arr, null, 4), function(err) {
     if(err) { console.error('err', err); }
-    else console.log('saved');
   });
    
  
