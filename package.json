@@ -4,7 +4,9 @@
   "description": "server that logs requests from particle.io for HAB",
   "main": "index.js",
   "dependencies": {
+    "body-parser": "^1.15.1",
     "express": "^4.13.4",
+    "multer": "^1.1.0",
     "pg": "^4.5.6"
   },
   "devDependencies": {},
